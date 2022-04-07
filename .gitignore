@@ -32,5 +32,6 @@ yarn-error.log*
 /debug.log
 
 
-/.next/*
-/.next
+/app/.next/*
+/app/.next
+/app/node_modules
