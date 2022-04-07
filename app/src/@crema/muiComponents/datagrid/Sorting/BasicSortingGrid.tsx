@@ -1,0 +1,24 @@
+import {DataGrid, GridSortModel} from '@mui/x-data-grid';
+import {useDemoData} from '@mui/x-data-grid-generator';
+import * as React from 'react';
+
+export default function BasicSortingGrid() {
+  const {data} = useDemoData({
+    dataSet: 'Commodity',
+    rowLength: 10,
+    maxColumns: 6,
+  });
+
+  const [sortModel, setSortModel] = React.useState<GridSortModel>([
+    {
+      field: 'commodity',
+      sort: 'asc',
+    },
+  ]);
+
+  return (
+    <div style={{height: 400, width: '100%'}}>
+      <DataGrid {...data} sortModel={sortModel} onSortModelChange={model => setSortModel(model)} />
+    </div>
+  );
+}
