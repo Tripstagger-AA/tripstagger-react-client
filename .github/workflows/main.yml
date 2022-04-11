@@ -1,0 +1,49 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+
+jobs:
+  publish-image:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+      - id: auth
+        name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v0
+        with:
+          token_format: access_token
+          workload_identity_provider: 'projects/951493780850/locations/global/workloadIdentityPools/github-pool-tripstagger-dev-34/providers/github-provider-tripstagger-dev-'
+          service_account: 'dockerregistryadminservice@tripstagger-dev-346819.iam.gserviceaccount.com'
+          access_token_lifetime: '300s'
+          audience: 'sigstore'
+      - name: Login to Artifact Registry
+        uses: docker/login-action@v1
+        with:
+          registry: europe-west3-docker.pkg.dev
+          username: oauth2accesstoken
+          password: ${{ steps.auth.outputs.access_token }}
+      - id: docker_push
+        name: Build and push
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: europe-west3-docker.pkg.dev/tripstagger-dev-346819/images/tripstagger-react-client:${{ github.sha }}
