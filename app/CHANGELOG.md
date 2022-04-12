@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.1.2 (2022-04-12)
+
+
+### Features
+
+* **Infrastructure:** Docker definition ([ed02938](https://github.com/Tripstagger-AA/tripstagger-react-client/commit/ed02938d3275f7867bef0b253c303b06221a3bd9))
+* **release:** gcp authorization  ([94e497e](https://github.com/Tripstagger-AA/tripstagger-react-client/commit/94e497efbc7936cd0756f4e1976568c18e06e695))
+* **release:** gcs auth integration  ([6e7ebd6](https://github.com/Tripstagger-AA/tripstagger-react-client/commit/6e7ebd6691fb43450521defc196a49138bab728e))
+* **release:** npm authorization ([bcaab4a](https://github.com/Tripstagger-AA/tripstagger-react-client/commit/bcaab4a5f49527b6d43f7ebabe24a814b1dc0474))
+* **release:** Publish image with version ([c48c284](https://github.com/Tripstagger-AA/tripstagger-react-client/commit/c48c28451a7154980eb4999953365b2ff4e9e6ee))
+
 ### 0.1.1 (2022-04-06)
 
 ### 0.1.2 (2022-04-06)
