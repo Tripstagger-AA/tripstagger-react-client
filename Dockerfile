@@ -4,7 +4,8 @@
 FROM node:alpine AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /usr/app
-COPY app/package.json app/yarn.lock .npmrc ./
+COPY app/package.json app/yarn.lock ./
+COPY ./.npmrc ./
 RUN --mount=type=cache,id=yarn,sharing=locked,target=/usr/local/share/.cache/yarn yarn install --frozen-lockfile
 
 # Rebuild the source code only when needed
