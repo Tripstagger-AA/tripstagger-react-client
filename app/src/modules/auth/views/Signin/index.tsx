@@ -4,7 +4,7 @@ import React from 'react';
 const Signin = () => {
   return (
     <AuthWrapper>
-      <p>Login</p>
+      <p>Login V1</p>
     </AuthWrapper>
   );
 };

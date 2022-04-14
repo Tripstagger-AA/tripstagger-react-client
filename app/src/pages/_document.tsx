@@ -10,7 +10,8 @@ export default class MyDocument extends Document {
       <Html lang='en'>
         <Head>
           {/* PWA primary color */}
-          <meta name='theme-color' content='#0A8FDC' />
+          <link rel="manifest" href="/manifest.json" />
+          <meta name='theme-color' content='#D6823D' />
           <link
             href='https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap'
             rel='stylesheet'

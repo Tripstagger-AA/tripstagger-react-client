@@ -1,0 +1,8 @@
+{
+  "name": "Tripstagger",
+  "short_name": "Tripstagger",
+  "start_url": "/",
+  "background_color": "#1F2527",
+  "theme_color": "#D6823D",
+  "orientation": "portrait-primary"
+}
