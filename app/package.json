@@ -99,7 +99,9 @@
     "lint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx,html,css,scss}\"",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,html,css,scss}\"",
     "precommit": "lint-staged",
-    "release": "standard-version && git push --tags && git push"
+    "release@patch": "standard-version --release-as patch && git push --tags && git push",
+    "release@minor": "standard-version --release-as minor && git push --tags && git push",
+    "release@major": "standard-version --release-as major && git push --tags && git push"
   },
   "browserslist": {
     "production": [
