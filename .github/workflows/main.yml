@@ -77,5 +77,9 @@ jobs:
               owner: 'Tripstagger-AA',
               repo: 'tripstagger-helm-chart',
               workflow_id: 'main.yml',
-              ref: 'master'
+              ref: 'main',
+              inputs: {
+                app: 'clientVersion',
+                version: '${{ steps.package-version.outputs.current-version}}'
+              },
             })
