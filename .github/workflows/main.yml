@@ -57,6 +57,7 @@ jobs:
           push: true
           tags: europe-west3-docker.pkg.dev/tripstagger-dev-346819/tripstagger-dev-346819-docker-registry/tripstagger-react-client:latest,europe-west3-docker.pkg.dev/tripstagger-dev-346819/tripstagger-dev-346819-docker-registry/tripstagger-react-client:${{ steps.package-version.outputs.current-version}}
   update-helm:
+    needs: publish-image
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
