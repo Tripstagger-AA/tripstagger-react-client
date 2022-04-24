@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/Tripstagger-AA/tripstagger-react-client/compare/v0.1.2...v0.1.3) (2022-04-24)
+
+
+### Features
+
+* **Release:** Add manifest.json for rediness probe ([e1cb0c4](https://github.com/Tripstagger-AA/tripstagger-react-client/commit/e1cb0c475dae980f3fe94e9adf1fed9d41071b40))
+* **Release:** Update chart on a new version ([ae596a0](https://github.com/Tripstagger-AA/tripstagger-react-client/commit/ae596a077a4c3dcecf5c270f9811a040a2a3fae6))
+
 ### 0.1.2 (2022-04-12)
 
 
