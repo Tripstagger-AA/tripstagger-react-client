@@ -43,6 +43,7 @@ module.exports = {
       2,
       {SwitchCase: 1, ignoredNodes: ['ConditionalExpression']}
     ],
+    "react/prop-types": 0,
     'no-multi-spaces': 'error',
     'space-in-parens': 'error',
     'no-multiple-empty-lines': 'error',

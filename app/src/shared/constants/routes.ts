@@ -2,6 +2,7 @@ export const ROUTES = {
   home: '',
   initial: '',
   auth: {
-    login: 'login'
+    signin: 'signin',
+    signup: 'signup'
   }
 };

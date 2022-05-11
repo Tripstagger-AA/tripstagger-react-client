@@ -1,6 +1,7 @@
 import '../../public/assets/styles/index.css';
 import '../shared/vendors/index.css';
 
+import {ConfigurationProvider, LanguageProvider, ThemeContextProvider} from '@app/layout/providers'; // Client-side cache, shared for the whole session of the user in the browser.
 import {EmotionCache} from '@emotion/cache';
 import {CacheProvider} from '@emotion/react';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -10,7 +11,7 @@ import React from 'react';
 import {Provider} from 'react-redux';
 
 import createEmotionCache from '../createEmotionCache';
-import {useStore} from '../redux/store'; // Client-side cache, shared for the whole session of the user in the browser.
+import {useStore} from '../redux/store';
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -29,10 +30,16 @@ export default function MyApp(properties: Properties) {
         <title>Tripstagger</title>
         <meta name='viewport' content='initial-scale=1, width=device-width' />
       </Head>
-      <Provider store={store}>
-        <CssBaseline />
-        <Component {...pageProps} />
-      </Provider>
+      <ThemeContextProvider>
+        <LanguageProvider>
+          <ConfigurationProvider>
+            <Provider store={store}>
+              <CssBaseline />
+              <Component {...pageProps} />
+            </Provider>
+          </ConfigurationProvider>
+        </LanguageProvider>
+      </ThemeContextProvider>
     </CacheProvider>
   );
 }

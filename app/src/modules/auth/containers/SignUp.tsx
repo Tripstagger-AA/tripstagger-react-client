@@ -1,13 +1,13 @@
 import AuthWrapper from '@app/auth/components/AuthWrapper';
+import {AppLoader} from '@app/shared/components';
 import React from 'react';
-import {AppLoader} from "@app/shared/components";
 
-const Signin = () => {
+const SignUp = () => {
   return (
     <AuthWrapper>
-      <AppLoader/>
+      <AppLoader />
     </AuthWrapper>
   );
 };
 
-export default Signin;
+export default SignUp;
