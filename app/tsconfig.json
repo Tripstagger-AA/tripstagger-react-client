@@ -23,18 +23,12 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
-      "@app/redux/*": ["redux/*"],
-      "@app/redux": ["redux"],
-      "@app/types/*": ["shared/types/*"],
-      "@app/types": ["shared/types"],
-      "@app/models/*": ["shared/models/*"],
-      "@app/models": ["shared/models"],
-      "@app/constants/*": ["shared/constants/*"],
-      "@app/constants": ["shared/constants"],
-      "@app/crema/*": ["@crema/*"],
-      "@app/crema": ["@crema"],
       "@app/auth/*": ["modules/auth/*"],
-      "@app/auth": ["modules/auth"]
+      "@app/auth": ["modules/auth"],
+      "@app/shared/*": ["shared/*"],
+      "@app/shared": ["shared"],
+      "@app/layout/*": ["modules/layout/*"],
+      "@app/layout": ["modules/layout"]
     }
   },
   "include": [

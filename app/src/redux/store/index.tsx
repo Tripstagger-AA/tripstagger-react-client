@@ -2,11 +2,7 @@ import {useMemo} from 'react';
 import {applyMiddleware, combineReducers, createStore} from 'redux';
 import thunkMiddleware from 'redux-thunk';
 
-import reducers from '../reducers';
-
-const rootReducer = combineReducers({
-  ...reducers,
-});
+const rootReducer = combineReducers({});
 
 export type AppState = ReturnType<typeof rootReducer>;
 
@@ -15,17 +11,17 @@ function initStore(initialState?: AppState) {
 }
 
 export const initializeStore = preloadedState => {
-  let _store = initStore(preloadedState);
+  let store = initStore(preloadedState);
 
   // After navigating to a page with an initial Redux state, merge that state
   // with the current state in the store, and create a new store
   if (preloadedState) {
-    _store = initStore({
+    store = initStore({
       ...preloadedState,
     });
   }
 
-  return _store;
+  return store;
 };
 
 export function useStore(initialState) {

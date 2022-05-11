@@ -1,3 +1,2 @@
-export * from './AppConst';
-export * from './AppEnums';
-export * from './ColorSets';
+export * from './colors';
+export * from './routes';
