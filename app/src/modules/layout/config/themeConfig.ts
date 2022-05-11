@@ -1,9 +1,11 @@
 import {ThemeOptions} from '@mui/material';
 
+export const primaryColor = '#fd933acc';
+
 export const themeConfig: ThemeOptions = {
   palette: {
     primary: {
-      main: '#fd933acc',
+      main: primaryColor,
     },
     secondary: {
       main: '#5A63C8',
